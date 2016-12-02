@@ -5,6 +5,7 @@
 	<title>横屏</title>
 	<script src="jquery-2.0.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<style type="text/css">
+	/*竖屏*/
 		@media screen and (orientation: portrait) {
 		    html{
 		        width : 100% ;
@@ -23,6 +24,7 @@
 		        background-color: yellow ;
 		    }
 		} 
+		/*横屏*/
 		@media screen and (orientation: landscape) {
 		    html{
 		        width : 100% ;
@@ -44,11 +46,11 @@
 		        background-color: yellow ;
 		        }
 		}
-#print p{
-        margin: auto ;
-        margin-top : 20px ;
-        text-align: center;
-      }
+		#print p{
+	        margin: auto ;
+	        margin-top : 20px ;
+	        text-align: center;
+	      }
 	</style>
 </head>
 <body class="webpBack">
@@ -79,10 +81,10 @@
 		
     	window.addEventListener(evt, function() {
         console.log(evt);
+        setTimeout(function(){
         var width = document.documentElement.clientWidth;
         var height =  document.documentElement.clientHeight;
         $print =  $('#print');
-        setTimeout(function(){
 	        if( width > height ){
 	
 	            $print.width(width);
